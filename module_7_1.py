@@ -9,9 +9,11 @@ class Product:
     def __str__(self):
         return (f'{self.name}, {self.weight}, {self.category}')
 
-class Shop(Product):
+class Shop():
     def __init__(self, name, weight, category, __file_name= 'products.txt'):
-        super().__init__(name, weight, category)
+        self.name = name
+        self.weight = weight
+        self.category = category
         self.__file_name = __file_name
 
     def get_products(self):
